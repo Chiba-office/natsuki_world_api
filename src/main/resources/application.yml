@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/world
+    username: root    # TODO: ????????
+    password: pass  # TODO: ????????
+    # MySQL ???????????
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # ???? hikaricp ??????????
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: world-schema
+      connection-timeout: 20000
+      # minimum-idle: 10
+      # maximum-pool-size: 20
+      idle-timeout: 300000
+      max-lifetime: 1200000
+# server?IP???
+server:
+  port: 8081
